@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="74dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@android:color/white"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/photo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/image2" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/blogger_sans_medium"
+                android:gravity="center_vertical"
+                android:textColor="@color/text"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@id/speciality"
+                app:layout_constraintEnd_toStartOf="@id/horizontal_split"
+                app:layout_constraintStart_toEndOf="@id/photo"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:layout_constraintVertical_bias="0.3"
+                tools:text="Lawyer's name" />
+
+            <TextView
+                android:id="@+id/speciality"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/blogger_sans_light"
+                android:gravity="center_vertical"
+                android:textColor="@color/text50"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/horizontal_split"
+                app:layout_constraintStart_toEndOf="@id/photo"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                tools:text="Speciality" />
+
+            <TextView
+                android:id="@+id/rating"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/blogger_sans_medium"
+                android:gravity="center_vertical"
+                android:textColor="@color/text"
+                android:textSize="13sp"
+                app:drawableEndCompat="@drawable/ic_rating"
+                android:drawablePadding="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="52dp"
+                tools:text="4.8" />
+
+            <TextView
+                android:id="@+id/rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/blogger_sans_light"
+                android:gravity="center_vertical"
+                android:textColor="@color/text"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toStartOf="@id/hours"
+                app:layout_constraintStart_toEndOf="@id/horizontal_split"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintHorizontal_bias="1"
+                android:layout_marginTop="26dp"
+                tools:text="£60.00" />
+
+            <TextView
+                android:id="@+id/hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:fontFamily="@font/blogger_sans_light"
+                android:gravity="center_vertical"
+                android:textColor="@color/text"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/rate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/rate"
+                app:layout_constraintTop_toTopOf="@id/rate"
+                app:layout_constraintVertical_bias="1"
+                app:layout_constraintBaseline_toBaselineOf="@id/rate"
+                android:layout_marginEnd="52dp"
+                android:text="@string/hours" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/horizontal_split"
+                app:layout_constraintGuide_end="130dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/right_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/ic_small_arrow" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/verified"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_marginEnd="4dp"
+        android:contentDescription="@string/background_verified"
+        android:elevation="5dp"
+        android:src="@drawable/verified" />
+
+</FrameLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="104dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/sort_by"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tabs"
+        android:layout_marginStart="24dp"
+        android:gravity="center_vertical"
+        android:textSize="22sp"
+        android:fontFamily="@font/blogger_sans_medium"
+        android:textColor="@color/text"
+        android:text="@string/app_name" />
+
+    <ImageView
+        android:id="@+id/sort_by"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_sort_by"
+        android:contentDescription="@string/sort_by"
+        app:layout_constraintStart_toEndOf="@id/toolbar_title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/filters"
+        app:layout_constraintBottom_toTopOf="@id/tabs"
+        android:layout_marginEnd="20dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"/>
+
+    <ImageView
+        android:id="@+id/filters"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_filters"
+        android:contentDescription="@string/filters"
+        app:layout_constraintStart_toEndOf="@id/sort_by"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tabs"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
+        android:layout_marginEnd="20dp"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:tabTextAppearance="@style/TabText"
+        app:tabTextColor="@color/text30"
+        app:tabSelectedTextColor="@color/text"
+        app:tabIndicatorColor="@color/gradient1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

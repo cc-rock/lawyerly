@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".list.LawyerListActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                android:background="@color/background"
+                app:contentInsetStart="0dp">
+
+                <include layout="@layout/lawyer_list_toolbar_content" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/parallax_image"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/illustration"
+            android:layout_gravity="top"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/lawyer_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="130dp"
+            android:paddingHorizontal="8dp"
+            android:clipToPadding="false"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@drawable/shadow"
+            android:layout_gravity="bottom"/>
+
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@color/background"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/lawyer_list_menu_bottom"/>
+
+</LinearLayout>

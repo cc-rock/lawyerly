@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_tab_1"
+        android:title="@string/tab_1"
+        android:icon="@drawable/first_tab" />
+    <item
+        android:id="@+id/action_tab_2"
+        android:title="@string/tab_2"
+        android:icon="@drawable/second_tab" />
+    <item
+        android:id="@+id/action_tab_3"
+        android:title="@string/tab_3"
+        android:icon="@drawable/third_tab" />
+    <item
+        android:id="@+id/action_tab_4"
+        android:title="@string/tab_4"
+        android:icon="@drawable/fourth_tab" />
+    <item
+        android:id="@+id/action_tab_5"
+        android:title="@string/tab_5"
+        android:icon="@drawable/fifth_tab" />
+</menu>
